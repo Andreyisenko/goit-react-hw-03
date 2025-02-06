@@ -1,6 +1,6 @@
 import css from './SearchBox.module.css';
 import { useId } from 'react';
-const SearchBox = ({ inputValue, handleChange }) => {
+const SearchBox = ({ inputValue, onSearch, handleChange }) => {
 const labId = useId()
 
   return (
@@ -9,7 +9,7 @@ const labId = useId()
       <input
         type="text"
         value={inputValue}
-        onChange={handleChange}
+        onChange={e =>{onSearch(e.target.value)}}
         id={labId}
         className={css.inp}
         name="search" placeholder='Search...'

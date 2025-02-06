@@ -7,12 +7,11 @@ import SearchBox from './SearchBox/SearchBox';
 import { useState } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 function App() {
+  const [contact, setContact] = useState(inContact);
   const [inputValue, setInputValue] = useState('');
-  const [contact, setContact] = useState([inContact]);
   const handleChange = evt => {
     setInputValue(evt.target.value);
   };
-  // console.log(values);
 
   const addContact = newContact => {
     setContact(prevContact => {
@@ -28,16 +27,20 @@ function App() {
     });
   };
 
-  const visibleContact = inContact.filter(cont =>
+
+
+
+
+  const visibleContact = contact.filter(cont =>
     cont.name.toLowerCase().includes(inputValue.toLowerCase().trim())
   );
 
   return (
     <div>
-      <IoCall size={30} /> <h1> Phonebook</h1>
+      <IoCall size={30} /> <h1 className="title" > Phonebook</h1>
       <ContactForm addContact={addContact} />
-      <SearchBox handleChange={handleChange} inputValue={inputValue} />
-      <ContactList onDelete={deleteContact}  contact={visibleContact} />
+      <SearchBox handleChange={handleChange}  onSearch={setInputValue} inputValue={inputValue} />
+      <ContactList onDelete={deleteContact} contact={visibleContact} />
     </div>
   );
 }
