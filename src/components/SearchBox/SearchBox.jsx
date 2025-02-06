@@ -1,7 +1,7 @@
 import css from './SearchBox.module.css';
 import { useId } from 'react';
-const SearchBox = ({ inputValue, onSearch, handleChange }) => {
-const labId = useId()
+const SearchBox = ({ inputValue, onSearch }) => {
+  const labId = useId();
 
   return (
     <div className={css.wrap}>
@@ -9,13 +9,15 @@ const labId = useId()
       <input
         type="text"
         value={inputValue}
-        onChange={e =>{onSearch(e.target.value)}}
+        onChange={e => {
+          onSearch(e.target.value);
+        }}
         id={labId}
         className={css.inp}
-        name="search" placeholder='Search...'
+        name="search"
+        placeholder="Search..."
       ></input>
-       <p>{inputValue}</p>
-    
+      <p>{inputValue}</p>
     </div>
   );
 };
