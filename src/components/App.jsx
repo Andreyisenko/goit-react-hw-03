@@ -9,13 +9,12 @@ import ContactForm from './ContactForm/ContactForm';
 function App() {
   const [contact, setContact] = useState(() => {
     const dataContakt = localStorage.getItem('contacts');
-
-    if (JSON.parse(dataContakt).length !== 0) {
+    if (dataContakt) {
       return JSON.parse(dataContakt);
     }
-
     return inContact;
   });
+
   const [inputValue, setInputValue] = useState('');
 
   const addContact = newContact => {
