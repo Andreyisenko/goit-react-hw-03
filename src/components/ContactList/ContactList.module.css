@@ -1,0 +1,9 @@
+.wraperContact {
+    background-color: blueviolet;
+    width: 440px;
+    margin:20px auto;
+    height: 100%;
+    border: solid 1px;
+    border-radius: 20px;
+    
+}

@@ -1,0 +1,37 @@
+
+.list {
+    width: 100%;
+    /* background-color: rgb(25, 93, 70); */
+}
+
+.item {
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgb(182, 114, 114) ;
+    text-shadow: 1px 2px rgb(239, 183, 183)  ;
+    margin: 10px auto;
+    width: 400px;
+    padding: 10px;
+    background-color: rgb(169, 172, 172);
+}
+.btnContact {
+    color: white;
+background-color: rgb(56, 101, 8);
+margin-top: 10px;
+border: none;
+border-radius: 20px;
+width: 100px;
+height: 30px;
+transition: background-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 300ms ease-in-out;
+/* transition: scale 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+}
+.btnContact:hover, .btnContact:focus {
+ background-color: rgb(11, 175, 95);
+transform: scale(1.1);
+}
+.texte {
+    color: wheat;
+    background-color: brown;
+    font-size: 32px;
+    border-radius: 20px;
+}
