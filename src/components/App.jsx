@@ -39,6 +39,7 @@ function App() {
 
   return (
     <div>
+      <p>goit-react-hw-03</p>
       <IoCall size={30} /> <h1 className="title"> Phonebook</h1>
       <ContactForm addContact={addContact} />
       <SearchBox onSearch={setInputValue} inputValue={inputValue} />
